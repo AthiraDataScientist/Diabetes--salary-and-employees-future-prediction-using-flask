@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error!</title>
+</head>
+<body>
+                {% with msg = get_flashed_messages() %}
+                {% if msg %}
+                {% for message in msg %}
+                <div class="alert alert-dismissible fade show tertiary" style ="background-color: rgba(255, 0, 0, 0.5);" role="alert">
+                <strong>{{ message }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+    
+</body>
+</html>
